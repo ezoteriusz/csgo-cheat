@@ -14,9 +14,9 @@ void startThread(const HMODULE hInstance)
 	Interfaces::setupInterfaces();
 	std::this_thread::sleep_for(std::chrono::milliseconds(50));
 	hooks::InitHooks();
-	std::cout << "\aWelcome back admin!\n";
+	std::cout << "\aWelcome back coder!\n";
 	std::cout << "build " << __DATE__ << " " << __TIME__ << "\n";
-	std::cout << "version debug" << "\n";
+	std::cout << "version DEBUG" << "\n";
 	std::cout << "\n";
 	while (!GetAsyncKeyState(VK_DELETE)) {
 
