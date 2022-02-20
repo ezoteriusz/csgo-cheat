@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\dllmain.cpp" />
+    <ClCompile Include="ext\minhook\buffer.c" />
+    <ClCompile Include="ext\minhook\hde32.c" />
+    <ClCompile Include="ext\minhook\hde64.c" />
+    <ClCompile Include="ext\minhook\hook.c" />
+    <ClCompile Include="ext\minhook\trampoline.c" />
+    <ClCompile Include="source\hooks.cpp" />
+    <ClCompile Include="source\Hacks\createmove.cpp" />
+    <ClCompile Include="source\Hacks\bunnyhop.cpp" />
+    <ClCompile Include="source\Hacks\esp.cpp" />
+    <ClCompile Include="source\Hacks\radarhack.cpp" />
+    <ClCompile Include="source\Hacks\glow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\hooks.h" />
+    <ClInclude Include="ext\minhook\buffer.h" />
+    <ClInclude Include="ext\minhook\hde32.h" />
+    <ClInclude Include="ext\minhook\hde64.h" />
+    <ClInclude Include="ext\minhook\MinHook.h" />
+    <ClInclude Include="ext\minhook\pstdint.h" />
+    <ClInclude Include="ext\minhook\table32.h" />
+    <ClInclude Include="ext\minhook\table64.h" />
+    <ClInclude Include="ext\minhook\trampoline.h" />
+    <ClInclude Include="ext\utils\util.h" />
+    <ClInclude Include="source\SDK\valve\IClientEntityList.h" />
+    <ClInclude Include="source\SDK\class\CEntity.h" />
+    <ClInclude Include="source\SDK\sdk.h" />
+    <ClInclude Include="source\SDK\netvars.h" />
+    <ClInclude Include="source\SDK\interfaces.h" />
+    <ClInclude Include="source\SDK\valve\IVDebugOverlay.h" />
+    <ClInclude Include="source\SDK\usercmd.h" />
+    <ClInclude Include="source\Hacks\createmove.h" />
+    <ClInclude Include="source\SDK\valve\IVEngineClient.h" />
+    <ClInclude Include="source\Hacks\bunnyhop.h" />
+    <ClInclude Include="source\Hacks\esp.h" />
+    <ClInclude Include="source\Hacks\radarhack.h" />
+    <ClInclude Include="source\Hacks\glow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ext\minhook\MinHook.def" />
+    <None Include="compile\csgo_build_release.dll" />
+    <None Include="compile\csgo_build_release.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ext\minhook\MinHook.rc" />
+  </ItemGroup>
+</Project>
