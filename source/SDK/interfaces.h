@@ -16,11 +16,18 @@ T* GetInterface(const char* name, const char* lib)
 }
 
 namespace Interfaces {
+	inline void* g_Client = nullptr;
+	inline void* g_ClientMode = nullptr;
+	inline IClientEntityList* entityList = nullptr;
+	inline IVDebugOverlay* gpDebugOverlay = nullptr;
+	inline IVEngineClient* engine = nullptr;
+	inline IEngineTraceClient* trace = nullptr;
 	  inline void setupInterfaces() {
 		g_Client = GetInterface<void>("VClient018", "client.dll");
 		g_ClientMode = **reinterpret_cast<void***>((*reinterpret_cast<unsigned int**>(g_Client))[10] + 5);
 		entityList = GetInterface<IClientEntityList>("VClientEntityList003", "client.dll");
 		gpDebugOverlay = GetInterface<IVDebugOverlay>("VDebugOverlay004", "engine.dll");
+		trace = GetInterface<IEngineTraceClient>("EngineTraceClient004", "engine.dll");
 		engine = GetInterface<IVEngineClient>("VEngineClient014", "engine.dll");
 	}
 }

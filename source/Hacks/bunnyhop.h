@@ -2,5 +2,5 @@
 #include "../SDK/usercmd.h"
 
 namespace movement {
-	void bunnyhop(UserCmd* cmd);
+	void bunnyhop(CUserCmd* cmd);
 }

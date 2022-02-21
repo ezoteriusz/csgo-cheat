@@ -1,6 +1,6 @@
 #pragma once
 #include "../SDK/usercmd.h"
-using CreateMove = bool(__thiscall*)(void*, float, UserCmd*);
+using CreateMove = bool(__thiscall*)(void*, float, CUserCmd*);
 inline CreateMove CreateMoveOriginal = nullptr;
 
-bool __stdcall CreateMoveHook(float frametime, UserCmd* cmd);
+bool __stdcall CreateMoveHook(float frametime, CUserCmd* cmd);

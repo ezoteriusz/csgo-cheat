@@ -1,4 +1,5 @@
 #pragma once
+#include "./CVector.h"
 
 struct player_info_t {
 	int64_t __pad0;
@@ -46,6 +47,8 @@ public:
 		using original_fn = bool(__thiscall*)(IVEngineClient*);
 		return (*(original_fn**)this)[26](this);
 	}
+	constexpr void SetViewAngles(const CVector& viewangles) noexcept
+	{
+		memory::Call<void, const CVector&>(this, 19, viewangles);
+	}
 };
-
-inline IVEngineClient* engine;

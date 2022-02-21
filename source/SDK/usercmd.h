@@ -1,4 +1,6 @@
 #pragma once
+#include <cstdint>
+#include "valve/CVector.h"
 
 struct Vector
 {
@@ -87,29 +89,25 @@ enum CommandButtons : int
     IN_SECOND_GRENADE = (1 << 24),
     IN_MIDDLE_ATTACK = (1 << 25)
 };
-
-struct UserCmd
+class CUserCmd
 {
+public:
     void* vmt;
-    int commandNumber;
-    int tickCount;
-    Vector viewPoint;
-    Vector aimDirection;
+    std::int32_t commandNumber;
+    std::int32_t tickCount;
+    CVector viewAngles;
+    CVector aimDirection;
     float forwardMove;
     float sideMove;
     float upMove;
-    int buttons;
+    std::int32_t buttons;
     char impulse;
-    int weaponSelect;
-    int weaponSubType;
-    int randomSeed;
+    std::int32_t weaponSelect;
+    std::int32_t weaponSubType;
+    std::int32_t randomSeed;
     short mouseDeltaX;
     short mouseDeltaY;
     bool hasBeenPredicted;
-    Vector headAngles;
-    Vector headOffset;
+    CVector headAngles;
+    CVector headOffset;
 };
-
-
-inline void* g_Client = nullptr;
-inline void* g_ClientMode = nullptr;

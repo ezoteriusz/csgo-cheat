@@ -1,4 +1,10 @@
 #pragma once
+#include "../sdk.h"
+
+#include "CEntity.h"
+#include "CVector.h"
+#include "../../../ext/utils/mem.h"
+
 class CEntity {
 public:
 	const int& getHealth() const noexcept
@@ -40,5 +46,30 @@ public:
 	const bool& getDormant() const noexcept
 	{
 		return *reinterpret_cast<bool*>(std::uintptr_t(this) + m_bDormant);
+	}
+	const int& getArmorValue()
+	{
+		return *reinterpret_cast<int*>(std::uint_fast16_t(this) + m_ArmorValue);
+	}
+	const int& getDefusing()
+	{
+		return *reinterpret_cast<int*>(std::uint_fast16_t(this) + m_bIsDefusing);
+	}
+
+	constexpr bool isAlive() noexcept
+	{
+		return memory::Call<bool>(this, 158);
+	}
+	constexpr void getEyePosition(CVector& eyePosition) noexcept
+	{
+		memory::Call<void, CVector&>(this, 285, eyePosition);
+	}
+	constexpr void getAimPunch(CVector& aimPunch)	noexcept
+	{
+		memory::Call<void, CVector&>(this, 346, aimPunch);
+	}
+	constexpr bool isPlayer() noexcept
+	{
+		return memory::Call<bool>(this, 158);
 	}
 };

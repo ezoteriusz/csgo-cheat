@@ -22,5 +22,3 @@ public:
 	virtual void				SetMaxEntities(int maxents) = 0;
 	virtual int					GetMaxEntities() = 0;
 };
-
-inline IClientEntityList* entityList = nullptr;
