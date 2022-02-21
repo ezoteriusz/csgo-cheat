@@ -7,10 +7,12 @@
 #include <cstdint>
 #include <sstream>
 #include <iostream>
+
+inline DWORD client_module;
+inline DWORD engine_module;
+
 #include "../../ext/utils/mem.h"
-
-
-
+#include "../../ext/utils/util.h"
 
 
 #include "../Hacks/triggerbot.h"
@@ -29,8 +31,6 @@
 #include "usercmd.h"
 
 
-extern DWORD client_module;
-extern DWORD engine_module;
 #include "interfaces.h" // KURWA NIE RUSZAJ TEGO BO CI WYJEBIE KOPA
 
 
