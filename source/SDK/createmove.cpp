@@ -5,7 +5,7 @@ using namespace std;
 bool __stdcall CreateMoveHook(float frametime, CUserCmd* cmd) {
 	const bool result = CreateMoveOriginal(Interfaces::g_ClientMode, frametime, cmd); /// na bhopa if !0 then jump
 
-	localPlayer = static_cast<CEntity*>(Interfaces::entityList->GetClientEntity(Interfaces::engine->get_local_player()));
+	localPlayer = Interfaces::entityList->GetClientEntity(Interfaces::engine->get_local_player());
 	if (result)
 		Interfaces::engine->SetViewAngles(cmd->viewAngles);
 
@@ -13,6 +13,7 @@ bool __stdcall CreateMoveHook(float frametime, CUserCmd* cmd) {
 	movement::bunnyhop(cmd);
 	esp::renderEsp();
 	glow::doGlow();
+	misc::noFlash();
 
 	return false;
 }

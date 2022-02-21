@@ -1,6 +1,5 @@
 #include "../SDK/sdk.h"
 #include "menu/menu.h"
-
 void __stdcall PaintTraversehook(unsigned int panel, bool force_repaint, bool allow_force)
 {
 	auto panel_to_draw = fnv::hash(Interfaces::panel->get_panel_name(panel));
@@ -12,7 +11,7 @@ void __stdcall PaintTraversehook(unsigned int panel, bool force_repaint, bool al
 	case fnv::hash("MatSystemTopPanel"):
 		int screenH, screenW;
 		Interfaces::engine->get_screen_size(screenH, screenW);
-		if (variables::cfg_watermark) {
+		if (variables::cfg_watermark){
 			render::text(100, 10, render::fonts::watermark_font, watermark, true, color::from_uint(D3DCOLOR_ARGB(150, 255, 255, 255)));
 		}
 		menu::toggle();

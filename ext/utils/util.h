@@ -14,6 +14,7 @@
 #include <unordered_map>
 #include <intrin.h>
 #include <filesystem>
+#include <psapi.h>
 
 #include "../../source/SDK/color.h"
 #include "../../source/SDK/sdk.h"

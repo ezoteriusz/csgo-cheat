@@ -7,7 +7,9 @@
 #include <cstdint>
 #include <sstream>
 #include <iostream>
-
+#include "vector2d.h"
+#include "vector3d.h"
+#include "vertex2.h"
 inline DWORD client_module;
 inline DWORD engine_module;
 template< typename Function > Function call_vfunc(PVOID Base, DWORD Index) 
@@ -23,6 +25,7 @@ template< typename Function > Function call_vfunc(PVOID Base, DWORD Index)
 #include "../../ext/utils/util.h"
 #include "../../ext/utils/fnv.h"
 
+#include "../Hacks/misc.h"
 #include "../Hacks/triggerbot.h"
 #include "../Hacks/glow.h"
 #include "../Hacks/radarhack.h"
@@ -43,6 +46,5 @@ template< typename Function > Function call_vfunc(PVOID Base, DWORD Index)
 #include "usercmd.h"
 #include "paintTraverse.h"
 #include "interfaces.h" // KURWA NIE RUSZAJ TEGO BO CI WYJEBIE KOPA
-
 
 inline CEntity* localPlayer = nullptr;

@@ -1,9 +1,21 @@
 #include "../SDK/sdk.h"
 #include <Windows.h>
 #include "esp.h"
+#include "../SDK/valve/CVector.h"
 std::string critical = "CRITICAL!";
 std::string dormAnt = "LAST SEEN";
 std::string armur = "armor:";
+
+struct
+{
+	CEntity* pl;
+	bool          is_enemy;
+	bool          is_visible;
+	CVector        head_pos;
+	CVector        feet_pos;
+	RECT          bbox;
+} ctx;
+
 void esp::renderEsp()
 {
 	if (variables::cfg_esp)
@@ -13,6 +25,7 @@ void esp::renderEsp()
 			auto Player = Interfaces::entityList->GetClientEntity(i);
 			if (!Player || !Interfaces::engine->is_in_game() || !localPlayer)
 				continue;
+
 			player_info_t info;
 			Interfaces::engine->get_player_info(i, &info);
 			std::stringstream health, armur1;
@@ -26,6 +39,9 @@ void esp::renderEsp()
 			char* armorRead = (char*)armorString.c_str();
 			if (Player->getTeam() != localPlayer->getTeam() && Player->getHealth() > 0 && Player->getHealth() <= 100 && Player->getHealth() > 25 && Player->getDormant() == true)
 			{
+
+				render::text(ctx.feet_pos.x, ctx.head_pos.y, render::fonts::esp_font, info.name, false, color::from_uint(D3DCOLOR_ARGB(255, 255, 255, 255)));
+
 				Interfaces::gpDebugOverlay->AddEntityTextOverlay(i, -1, 0, 150, 0, 255, 255, info.name);
 				Interfaces::gpDebugOverlay->AddEntityTextOverlay(i, 1, 0, 0, 220, 255, 255, armorRead);
 				Interfaces::gpDebugOverlay->AddEntityTextOverlay(i, 0, 0, 0, 255, 100, 255, healthRead);

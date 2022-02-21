@@ -19,6 +19,7 @@
     <ClCompile Include="source\SDK\menu\framework.cpp" />
     <ClCompile Include="source\SDK\rendering.cpp" />
     <ClCompile Include="source\SDK\menu\menu.cpp" />
+    <ClCompile Include="source\Hacks\misc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\hooks.h" />
@@ -61,6 +62,7 @@
     <ClInclude Include="source\SDK\color.h" />
     <ClInclude Include="source\SDK\menu\verbs.h" />
     <ClInclude Include="source\SDK\menu\menu.h" />
+    <ClInclude Include="source\Hacks\misc.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ext\minhook\MinHook.def" />

@@ -155,6 +155,7 @@
     <ClCompile Include="source\dllmain.cpp" />
     <ClCompile Include="source\Hacks\aimbot.cpp" />
     <ClCompile Include="source\Hacks\bunnyhop.cpp" />
+    <ClCompile Include="source\Hacks\misc.cpp" />
     <ClCompile Include="source\SDK\createmove.cpp" />
     <ClCompile Include="source\Hacks\esp.cpp" />
     <ClCompile Include="source\Hacks\glow.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="ext\utils\util.h" />
     <ClInclude Include="source\Hacks\aimbot.h" />
     <ClInclude Include="source\Hacks\bunnyhop.h" />
+    <ClInclude Include="source\Hacks\misc.h" />
     <ClInclude Include="source\SDK\color.h" />
     <ClInclude Include="source\SDK\createmove.h" />
     <ClInclude Include="source\Hacks\esp.h" />

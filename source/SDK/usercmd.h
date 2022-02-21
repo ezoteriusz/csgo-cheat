@@ -2,12 +2,6 @@
 #include <cstdint>
 #include "valve/CVector.h"
 
-struct Vector
-{
-    float x, y, z;
-};
-
-
 enum move_type {
     movetype_none = 0,
     movetype_isometric,
