@@ -51,4 +51,9 @@ public:
 	{
 		memory::Call<void, const CVector&>(this, 19, viewangles);
 	}
+	int GetMaxClients()
+	{
+		typedef bool(__thiscall* oGetMaxClients)(PVOID);
+		return call_vfunc< oGetMaxClients >(this, 20)(this);
+	}
 };

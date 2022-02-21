@@ -4,6 +4,8 @@
 
 void movement::bunnyhop(CUserCmd* cmd)
 {
-	if (!(localPlayer->getFlags() & fl_onground))
-		cmd->buttons &= ~IN_JUMP;
+	if (variables::cfg_bunnyhop) {
+		if (!(localPlayer->getFlags() & fl_onground))
+			cmd->buttons &= ~IN_JUMP;
+	}
 }

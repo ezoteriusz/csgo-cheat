@@ -3,6 +3,7 @@
 #include "../ext/utils/util.h"
 #include "hooks.h"
 #include "SDK/sdk.h"
+#include "SDK/menu/verbs.h"
 
 
 
@@ -13,8 +14,10 @@ void startThread(const HMODULE hInstance)
 	std::this_thread::sleep_for(std::chrono::milliseconds(50));
 	Interfaces::setupInterfaces();
 	std::this_thread::sleep_for(std::chrono::milliseconds(50));
+	render::initialize();
+	std::this_thread::sleep_for(std::chrono::milliseconds(50));
 	hooks::InitHooks();
-	std::cout << "\aWelcome back coder!\n";
+	std::cout << "\aWelcome back!\n";
 	std::cout << "build " << __DATE__ << " " << __TIME__ << "\n";
 	std::cout << "version DEBUG" << "\n";
 	std::cout << "\n";
@@ -22,6 +25,8 @@ void startThread(const HMODULE hInstance)
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(1));
 	}
+	variables::menu::opened = false;
+	std::this_thread::sleep_for(std::chrono::milliseconds(50));
 	hooks::UninitializeHooks();
 	console::Detach();
 	FreeLibraryAndExitThread(hInstance,0);

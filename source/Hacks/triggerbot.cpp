@@ -4,12 +4,12 @@
 
 bool _stdcall triggerbot::doTrigger(CUserCmd* cmd)
 {
-	
-	if (!Interfaces::engine->is_in_game() || !localPlayer->isAlive())
-		return false;
+	if (variables::cfg_triggerbot) {
+		if (!Interfaces::engine->is_in_game() || !localPlayer->isAlive())
+			return false;
 
 		CTrace trace;
-		CVector eyePos,aimPunch;
+		CVector eyePos, aimPunch;
 		localPlayer->getEyePosition(eyePos);
 		localPlayer->getAimPunch(aimPunch);
 
@@ -17,18 +17,14 @@ bool _stdcall triggerbot::doTrigger(CUserCmd* cmd)
 		Interfaces::trace->TraceRay({ eyePos,distance }, 0x46004009, localPlayer, trace);
 
 		if (!trace.entity || !trace.entity->isPlayer())
-			return false;  
+			return false;
 		if (!trace.entity->isAlive())
 			return false;
 		if (trace.entity->getTeam() == localPlayer->getTeam())
 			return false;
-		if (trace.hitgroup != 1)
-			return false;
-		console::setColor(2);
-		std::cout << "[" << trace.entity << "]\n";
-		console::setColor(4);
-		std::cout << "[HITGROUP] " << trace.hitgroup << "\n";
-		std::cout << "\n";
-		cmd->buttons |= IN_ATTACK;
+		/*if (trace.hitgroup != 1)
+			return false;*/
+			cmd->buttons |= IN_ATTACK;
+	}
 		return false;
 }
