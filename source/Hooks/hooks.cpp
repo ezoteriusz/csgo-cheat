@@ -1,5 +1,5 @@
 #include "hooks.h"
-#include "SDK/sdk.h"
+#include "../SDK/sdk.h"
 #include <stdexcept>
 
 namespace hooks {
