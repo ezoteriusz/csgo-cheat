@@ -1,6 +1,6 @@
 #pragma once
-#include "../../ext/utils/util.h"
-#include "vertex2.h"
+#include "../../../ext/utils/util.h"
+#include "../math/vertex2.h"
 enum font_flags {
 	fontflag_none,
 	fontflag_italic = 0x001,

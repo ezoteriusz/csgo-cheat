@@ -7,9 +7,9 @@
 #include <cstdint>
 #include <sstream>
 #include <iostream>
-#include "vector2d.h"
-#include "vector3d.h"
-#include "vertex2.h"
+#include "../SDK/math/vector2d.h"
+#include "../SDK/math/vector3d.h"
+#include "../SDK/math/vertex2.h"
 inline DWORD client_module;
 inline DWORD engine_module;
 template< typename Function > Function call_vfunc(PVOID Base, DWORD Index) 
@@ -33,8 +33,8 @@ template< typename Function > Function call_vfunc(PVOID Base, DWORD Index)
 #include "../Hacks/bunnyhop.h"
 
 
-#include "createmove.h"
-#include "netvars.h"
+#include "../Hooks/createmove.h"
+#include "../SDK/valve/netvars.h"
 
 #include "valve/ISurface.h"
 #include "valve/IPanel.h"
@@ -43,8 +43,8 @@ template< typename Function > Function call_vfunc(PVOID Base, DWORD Index)
 #include "valve/CEntity.h"
 #include "valve/IClientEntityList.h"
 #include "valve/IVDebugOverlay.h"
-#include "usercmd.h"
-#include "paintTraverse.h"
-#include "interfaces.h" // KURWA NIE RUSZAJ TEGO BO CI WYJEBIE KOPA
+#include "../SDK/valve/usercmd.h"
+#include "../Hooks/paintTraverse.h"
+#include "interfaces/interfaces.h" // KURWA NIE RUSZAJ TEGO BO CI WYJEBIE KOPA
 
 inline CEntity* localPlayer = nullptr;

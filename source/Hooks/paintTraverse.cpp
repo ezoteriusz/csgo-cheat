@@ -1,5 +1,5 @@
 #include "../SDK/sdk.h"
-#include "menu/menu.h"
+#include "../SDK/menu/menu.h"
 void __stdcall PaintTraversehook(unsigned int panel, bool force_repaint, bool allow_force)
 {
 	auto panel_to_draw = fnv::hash(Interfaces::panel->get_panel_name(panel));

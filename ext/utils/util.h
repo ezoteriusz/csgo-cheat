@@ -16,9 +16,9 @@
 #include <filesystem>
 #include <psapi.h>
 
-#include "../../source/SDK/color.h"
+#include "../../source/SDK/render/color.h"
 #include "../../source/SDK/sdk.h"
-#include "../../source/SDK/rendering.h"
+#include "../../source/SDK/render/rendering.h"
 
 
 namespace console {

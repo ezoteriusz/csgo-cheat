@@ -1,5 +1,5 @@
 #pragma once
-#include "../vertex2.h"
+#include "../math/vertex2.h"
 
 class i_surface {
 public:

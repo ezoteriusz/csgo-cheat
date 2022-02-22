@@ -1,6 +1,6 @@
 #pragma once
 #include <cstdint>
-#include "valve/CVector.h"
+#include "../valve/CVector.h"
 
 enum move_type {
     movetype_none = 0,

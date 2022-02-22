@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include <thread>
 #include "../ext/utils/util.h"
-#include "hooks.h"
+#include "Hooks/hooks.h"
 #include "SDK/sdk.h"
 #include "SDK/menu/verbs.h"
 

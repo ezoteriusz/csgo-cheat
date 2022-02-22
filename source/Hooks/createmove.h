@@ -1,5 +1,6 @@
 #pragma once
-#include "../SDK/usercmd.h"
+#include "../SDK/valve/usercmd.h"
+
 using CreateMove = bool(__thiscall*)(void*, float, CUserCmd*);
 inline CreateMove CreateMoveOriginal = nullptr;
 

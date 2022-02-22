@@ -1,5 +1,5 @@
 #pragma once
-#include "../SDK/usercmd.h"
+#include "../SDK/valve/usercmd.h"
 
 namespace movement {
 	void bunnyhop(CUserCmd* cmd);
