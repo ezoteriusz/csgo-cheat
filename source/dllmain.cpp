@@ -11,16 +11,23 @@ void startThread(const HMODULE hInstance)
 {
 	console::Init("debugger");
 	modules::setupModules();
-	std::this_thread::sleep_for(std::chrono::milliseconds(50));
-	Interfaces::setupInterfaces();
-	std::this_thread::sleep_for(std::chrono::milliseconds(50));
-	render::initialize();
-	std::this_thread::sleep_for(std::chrono::milliseconds(50));
-	hooks::InitHooks();
 	std::cout << "\aWelcome back!\n";
 	std::cout << "build " << __DATE__ << " " << __TIME__ << "\n";
 	std::cout << "version DEBUG" << "\n";
 	std::cout << "\n";
+	try {
+		Interfaces::setupInterfaces();
+		render::initialize();
+		hooks::InitHooks();
+	}
+	catch (const std::runtime_error& error) {
+		MessageBoxA(nullptr, error.what(), "crash!", MB_OK | MB_ICONERROR);
+		variables::menu::opened = false;
+		hooks::UninitializeHooks();
+		console::Detach();
+		FreeLibraryAndExitThread(hInstance, 0);
+	}
+
 	while (!GetAsyncKeyState(VK_DELETE)) {
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(1));
