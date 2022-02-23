@@ -1,9 +1,6 @@
 #pragma once
 #include <cstdint>
 
-// 2022-02-19 17:22:51.412128100 UTC
-
-//	constexpr ::std::int64_t timestamp  1645291371
 #define cs_gamerules_data  0x0
 #define m_ArmorValue  0x117CC
 #define m_Collision  0x320
@@ -97,6 +94,7 @@
 #define m_vecViewOffset  0x108
 #define m_viewPunchAngle  0x3030
 #define m_zoomLevel  0x33E0
+
 #define anim_overlays  0x2990
 #define clientstate_choked_commands  0x4D30
 #define clientstate_delta_ticks  0x174
@@ -112,45 +110,45 @@
 #define dwClientState_PlayerInfo  0x52C0
 #define dwClientState_State  0x108
 #define dwClientState_ViewAngles  0x4D90
-#define dwEntityList  0x4DD0E5C
-#define dwForceAttack  0x3201310
-#define dwForceAttack2  0x320131C
-#define dwForceBackward  0x320134C
-#define dwForceForward  0x3201340
-#define dwForceJump  0x527AD80
-#define dwForceLeft  0x3201358
-#define dwForceRight  0x3201364
+#define dwEntityList  0x4DCDE7C
+#define dwForceAttack  0x31FE33C
+#define dwForceAttack2  0x31FE348
+#define dwForceBackward  0x31FE384
+#define dwForceForward  0x31FE378
+#define dwForceJump  0x5277DA0
+#define dwForceLeft  0x31FE390
+#define dwForceRight  0x31FE39C
 #define dwGameDir  0x62B880
-#define dwGameRulesProxy  0x52EDDDC
-#define dwGetAllClasses  0xDDF17C
+#define dwGameRulesProxy  0x52EADFC
+#define dwGetAllClasses  0xDDC17C
 #define dwGlobalVars  0x58CCC8
-#define dwGlowObjectManager  0x5319278
-#define dwInput  0x5222430
-#define dwInterfaceLinkList  0x967FB4
-#define dwLocalPlayer  0xDB55DC
-#define dwMouseEnable  0xDBB2E8
-#define dwMouseEnablePtr  0xDBB2B8
-#define dwPlayerResource  0x31FF6C0
-#define dwRadarBase  0x5205BD4
-#define dwSensitivity  0xDBB184
-#define dwSensitivityPtr  0xDBB158
+#define dwGlowObjectManager  0x5316290
+#define dwInput  0x521F450
+#define dwInterfaceLinkList  0x964464
+#define dwLocalPlayer  0xDB25DC
+#define dwMouseEnable  0xDB82E8
+#define dwMouseEnablePtr  0xDB82B8
+#define dwPlayerResource  0x31FC6E0
+#define dwRadarBase  0x5202BF4
+#define dwSensitivity  0xDB8184
+#define dwSensitivityPtr  0xDB8158
 #define dwSetClanTag  0x8A340
-#define dwViewMatrix  0x4DC2774
-#define dwWeaponTable  0x5222EF8
+#define dwViewMatrix  0x4DBF794
+#define dwWeaponTable  0x521FF18
 #define dwWeaponTableIndex  0x326C
-#define dwYawPtr  0xDBAF48
-#define dwZoomSensitivityRatioPtr  0xDC1158
-#define dwbSendPackets  0xD94C2
+#define dwYawPtr  0xDB7F48
+#define dwZoomSensitivityRatioPtr  0xDBE158
+#define dwbSendPackets  0xD9542
 #define dwppDirect3DDevice9  0xA5050
-#define find_hud_element  0x595949F0
-#define force_update_spectator_glow  0x3BB05A
+#define find_hud_element  0x59124E40
+#define force_update_spectator_glow  0x3BB3DA
 #define interface_engine_cvar  0x3E9EC
-#define is_c4_owner  0x3C8110
+#define is_c4_owner  0x3C8490
 #define m_bDormant  0xED
 #define m_flSpawnTime  0x103C0
 #define m_pStudioHdr  0x2950
-#define m_pitchClassPtr  0x5205E70
-#define m_yawClassPtr  0xDBAF48
+#define m_pitchClassPtr  0x5202E90
+#define m_yawClassPtr  0xDB7F48
 #define model_ambient_min  0x59003C
-#define set_abs_angles  0x1E5330
-#define set_abs_origin  0x1E5170
+#define set_abs_angles  0x1E51E0
+#define set_abs_origin  0x1E5020
